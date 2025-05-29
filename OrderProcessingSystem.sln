@@ -4,8 +4,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AF389725-4D2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{2805CB2D-0571-4C0C-B351-523FF2720DA4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OrderService", "OrderService", "{995D6721-8343-47EF-BF6B-0A5CCC2DE0A1}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{86FE7AB9-3EA0-48C1-9647-313E2C533D77}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
@@ -17,7 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{995D6721-8343-47EF-BF6B-0A5CCC2DE0A1} = {AF389725-4D2E-4953-BE7F-B1431BE8BE94}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 	EndGlobalSection
