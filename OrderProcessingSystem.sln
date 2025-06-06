@@ -16,7 +16,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService", "src\OrderSe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{5F4BD923-F4C6-4680-A658-22187D281CCC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService.Application.Domain", "src\Application\OrderService.Application.Domain\OrderService.Application.Domain.csproj", "{F6F7CB8F-0990-46B3-82AF-EA64F12FF347}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService.Application.Models", "src\Application\OrderService.Application.Models\OrderService.Application.Models.csproj", "{F6F7CB8F-0990-46B3-82AF-EA64F12FF347}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService.Application", "src\Application\OrderService.Application\OrderService.Application.csproj", "{91308183-F0DF-42C7-AEDC-77AB0481D5D6}"
 EndProject
