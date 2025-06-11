@@ -32,6 +32,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService.Infrastructure.Persistence", "src\Infrastructure\OrderService.Infrastructure.Persistence\OrderService.Infrastructure.Persistence.csproj", "{07D9D0AA-114F-47C6-B6BC-3FAD3F3D8ADA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{1E41DA30-3BED-4D84-9F4A-E25E600B3750}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Packages.props = Directory.Packages.props
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +54,7 @@ Global
 		{953C083F-130E-48C0-8B27-9EB6054E70E9} = {1F007C6A-69E3-497C-B6C5-3130BFB7262D}
 		{3ABC571D-30FC-442C-9618-1C561C1DC948} = {2C10E1B1-2758-441B-BAF1-E1B62CA5E618}
 		{07D9D0AA-114F-47C6-B6BC-3FAD3F3D8ADA} = {3ABC571D-30FC-442C-9618-1C561C1DC948}
+		{1E41DA30-3BED-4D84-9F4A-E25E600B3750} = {2C10E1B1-2758-441B-BAF1-E1B62CA5E618}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{8FB37BDF-FDE8-46AF-A189-62A0ABF23EA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
