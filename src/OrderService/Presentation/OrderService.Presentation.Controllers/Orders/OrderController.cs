@@ -8,13 +8,14 @@ namespace OrderService.Presentation.Controllers.Orders;
 public class OrderController : ControllerBase
 {
     private readonly IOrderAppService _orderAppService;
-
+    
     public OrderController(IOrderAppService orderAppService)
     {
         _orderAppService = orderAppService;
     }
-
-    public async Task<ActionResult> GetOrders()
+    
+    [HttpPost("create")]
+    public async Task<ActionResult<OrderDto>> CreateOrders()
     {
         // TODO: Добавить DTO 
         await _orderAppService.CreateOrderAsync();

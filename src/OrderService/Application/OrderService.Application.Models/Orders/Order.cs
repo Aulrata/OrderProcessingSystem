@@ -1,8 +1,8 @@
 namespace OrderService.Application.Models.Orders;
 
 public record Order(
-    Guid Id,
-    Guid CustomerId,
+    long Id,
+    long CustomerId,
     IEnumerable<OrderItem> Items,
     double TotalPrice,
     OrderStatus Status,

@@ -1,0 +1,57 @@
+﻿version: '3.8'
+
+services:
+  orderservice:
+    build:
+      context: .
+      dockerfile: src/OrderService/OrderService/Dockerfile
+    container_name: orderservice-app
+    environment:
+      Infrastructure__Persistence__Postgres__Host: orders-postgres
+      Infrastructure__Persistence__Postgres__Database: orderservice_db
+      Infrastructure__Persistence__Postgres__Username: orderservice_user
+      Infrastructure__Persistence__Postgres__Password: orderservice_password
+      Infrastructure__Persistence__Postgres__Port: 5433
+    ports:
+      - "127.0.0.1:5001:8080"
+    depends_on:
+      orders-postgres:
+        condition: service_healthy
+    networks:
+      - microservices-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 10s
+      timeout: 10s
+      retries: 3
+
+  orders-postgres:
+    image: postgres:16-alpine
+    container_name: orders-postgres
+    environment:
+      POSTGRES_DB: orderservice_db
+      POSTGRES_USER: orderservice_user
+      POSTGRES_PASSWORD: orderservice_password
+      POSTGRES_INITDB_ARGS: "--encoding=UTF-8 --lc-collate=C --lc-ctype=C"
+    ports:
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - orders_data:/var/lib/postgresql/data
+    networks:
+      - microservices-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U orderservice_user -d orderservice_db"]
+      interval: 2s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  orders_data:
+    driver: local
+
+networks:
+  microservices-network:
+    driver: bridge
+    name: microservices-network
